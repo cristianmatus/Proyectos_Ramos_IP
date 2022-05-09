@@ -1,0 +1,6 @@
+int entero = 123
+string cadena = "AJ"
+char letra = "g"
+double doble = 1.5
+bool valor = true or false
+decimal decil = 2.30m
