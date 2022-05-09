@@ -1,0 +1,2 @@
+C:\Users\Matute\source\repos\JSON_Example\obj\Debug\JSON_Example.csprojAssemblyReference.cache
+C:\Users\Matute\source\repos\JSON_Example\obj\Debug\JSON_Example.csproj.CoreCompileInputs.cache
