@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{771DEEFA-3867-4687-8254-E2B7DA0A2A72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cristian_Matus_Evaluacion2OrangeSchool</RootNamespace>
+    <AssemblyName>Cristian Matus_Evaluacion2OrangeSchool</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administradores.cs">
+      <DependentUpon>BDOrange.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos.cs">
+      <DependentUpon>BDOrange.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDOrange.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDOrange.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDOrange.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDOrange.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDOrange.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDOrange.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ActAdministrador_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ActAdministrador_form.Designer.cs">
+      <DependentUpon>ActAdministrador_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Administradores_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Administradores_form.Designer.cs">
+      <DependentUpon>Administradores_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Alumnos_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Alumnos_form.Designer.cs">
+      <DependentUpon>Alumnos_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AñadAdministrador_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AñadAdministrador_form.Designer.cs">
+      <DependentUpon>AñadAdministrador_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AñadAdmin_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AñadAdmin_form.Designer.cs">
+      <DependentUpon>AñadAdmin_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AñadAlumno_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AñadAlumno_form.Designer.cs">
+      <DependentUpon>AñadAlumno_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login_form.Designer.cs">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Menu_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menu_form.Designer.cs">
+      <DependentUpon>Menu_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ModAlumno_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModAlumno_form.Designer.cs">
+      <DependentUpon>ModAlumno_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Profesores_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Profesores_form.Designer.cs">
+      <DependentUpon>Profesores_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\ActAdministrador_form.resx">
+      <DependentUpon>ActAdministrador_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Administradores_form.resx">
+      <DependentUpon>Administradores_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Alumnos_form.resx">
+      <DependentUpon>Alumnos_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AñadAdministrador_form.resx">
+      <DependentUpon>AñadAdministrador_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AñadAdmin_form.resx">
+      <DependentUpon>AñadAdmin_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AñadAlumno_form.resx">
+      <DependentUpon>AñadAlumno_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login_form.resx">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Menu_form.resx">
+      <DependentUpon>Menu_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModAlumno_form.resx">
+      <DependentUpon>ModAlumno_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Profesores_form.resx">
+      <DependentUpon>Profesores_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="BDOrange.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDOrange.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BDOrange.edmx.diagram">
+      <DependentUpon>BDOrange.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alumno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emblema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoChico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoGrande.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoChico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logogrande.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BDOrange.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDOrange.edmx</DependentUpon>
+      <LastGenOutput>BDOrange.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BDOrange.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDOrange.edmx</DependentUpon>
+      <LastGenOutput>BDOrange.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
