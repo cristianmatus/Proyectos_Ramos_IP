@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28-11-2020 23:05:34 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJO.Persona" table="persona" catalog="hibernate" optimistic-lock="version">
+        <id name="idPersona" type="java.lang.Integer">
+            <column name="ID_PERSONA" />
+            <generator class="identity" />
+        </id>
+        <property name="rut" type="string">
+            <column name="RUT" length="10" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="20" not-null="true" />
+        </property>
+        <property name="apellidoPat" type="string">
+            <column name="APELLIDO_PAT" length="30" not-null="true" />
+        </property>
+        <property name="edad" type="int">
+            <column name="EDAD" not-null="true" />
+        </property>
+        <property name="hobby" type="string">
+            <column name="HOBBY" length="40" />
+        </property>
+        <set name="telefonos" table="telefono" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ID_PERSONA_FK" not-null="true" />
+            </key>
+            <one-to-many class="POJO.Telefono" />
+        </set>
+    </class>
+</hibernate-mapping>
